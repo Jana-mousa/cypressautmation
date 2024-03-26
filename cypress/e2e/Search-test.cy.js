@@ -301,6 +301,18 @@ describe('Test-Case-Search 45', () => {
 
   })
 })
+describe('Test-Case-Search 46', () => {
+  it('check search at language , company , city - Negative ', () => {
+    cy.get('.search-bar').type('frontend and souktel and tulkarm')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 47-negativ',()=>{
+  it('check search at languge with another error language name ',()=>{
+    cy.get('.search-bar').type('Fultter and C1#')
+    cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
+  })
+})
 describe('Test-Case-Search 56', () => {
   it('check search at language , company , city - Negative ', () => {
     cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
