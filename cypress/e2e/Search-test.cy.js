@@ -331,3 +331,10 @@ describe('Test-Case-Search 60',()=>{
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 61-negativ',()=>{
+  it('check search at languge ',()=>{
+    cy.get('.search-bar').type('Backend')
+    cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
+  })
+})
+
