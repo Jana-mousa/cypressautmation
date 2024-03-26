@@ -179,6 +179,12 @@ describe('Test-Case-Search 26', () => {
    
   })
 })
+describe('Test-Case-Search 27',()=>{
+  it('check seach at Company name and Language',()=>{
+    cy.get('.search-bar').type('Bisan Systemss and DBA')
+    cy.get('.company-name').should('contain','Bisan Systems')
+  })
+})
 
 
 
@@ -189,4 +195,97 @@ describe('Test-Case-Search 30',()=>{
 })
 
 
+
+
+
+describe('Test-Case-Search 31', () => {
+  it('check search at company name', () => {
+    cy.get('.search-bar').type('iVAS Communications Ltd')
+  })
+})
+describe('Test-Case-Search 32', () => {
+  it('check search at error in company name - Negative', () => {
+    cy.get('.search-bar').type('addham inc23')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 33', () => {
+  it('check search at language - Negative', () => {
+    cy.get('.search-bar').type('mooblie')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 34', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('angular and adham and flutter ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 35', () => {
+  it('check search at error in company name with language - Negative', () => {
+    cy.get('.search-bar').type('frontend ,al andlos software Development ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
+describe('Test-Case-Search 36', () => {
+  it('check search at error in company name with language - Negative', () => {
+    cy.get('.search-bar').type('broginer Technologe, python ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
+describe('Test-Case-Search 37', () => {
+  it('check search at company name', () => {
+    cy.get('.search-bar').type('ProGineer Technologies')
+  })
+})
+describe('Test-Case-Search 38', () => {
+  it('check search at error in city name with language - Negative ', () => {
+    cy.get('.search-bar').type('nablose,C#')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 39', () => {
+  it('check search at company name', () => {
+    cy.get('.search-bar').type('Isra Software & Computer Co')
+  })
+})
+describe('Test-Case-Search 40', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('angular and Isra Software & Computer Co and frontend ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 41', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('flutter and adham inc and java ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 42', () => {
+  it('check search at company name with another company name - Negative', () => {
+    cy.get('.search-bar').type('souktel and adham inc ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 43', () => {
+  it('check search at city name,company name,technology  - Negative', () => {
+    cy.get('.search-bar').type('ramallah and adham inc and frontend ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 44', () => {
+  it('check search at company name,city name,language  - Negative', () => {
+    cy.get('.search-bar').type('souktel and nablus and java ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 45', () => {
+  it('check search at error in city name with technology - Negative', () => {
+    cy.get('.search-bar').type('nablose and nodejs ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
 
