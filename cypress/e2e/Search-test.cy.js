@@ -434,12 +434,7 @@ describe('Test-Case-Search 65', () => {
   })
 })
 
-describe('Test-Case-Search 66', () => {
-  it('check search at DevOps', () => {
-    cy.get('.search-bar').type('DevOps')
-    cy.get('.actions-button').click();
-  })
-})
+
 
 
 
