@@ -250,3 +250,15 @@ describe('Test-Case-Search 42', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 43', () => {
+  it('check search at city name,company name,technology  - Negative', () => {
+    cy.get('.search-bar').type('ramallah and adham inc and frontend ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 44', () => {
+  it('check search at company name,city name,language  - Negative', () => {
+    cy.get('.search-bar').type('souktel and nablus and java ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
