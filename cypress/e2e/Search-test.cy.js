@@ -313,6 +313,19 @@ describe('Test-Case-Search 47-negativ',()=>{
     cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
   })
 })
+describe('Test-Case-Search 48', () => {
+  it('check search at Mobile', () => {
+    cy.get('.search-bar').type('Mobile')
+  })
+})
+
+
+describe('Test-Case-Search 49', () => {
+  it('check search at Angular', () => {
+    cy.get('.search-bar').type('Anjolar')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
 describe('Test-Case-Search 56', () => {
   it('check search at language , company , city - Negative ', () => {
     cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
