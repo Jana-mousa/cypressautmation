@@ -156,3 +156,9 @@ describe('Test-Case-Search 24',()=>{
 
     })
 })
+describe('Test-Case-Search 25', () => {
+  it('check search at Backend-Flask', () => {
+    cy.get('.search-bar').type('c++=')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
