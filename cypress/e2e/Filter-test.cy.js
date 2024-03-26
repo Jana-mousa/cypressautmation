@@ -133,3 +133,8 @@ describe('Test-Case-Search 19', () => {
     cy.get('.Not-found-container > :nth-child(3)').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 21',()=>{
+  it('check search at Backend',()=>{
+    cy.get('.search-bar').type('Backend')
+  })
+})
