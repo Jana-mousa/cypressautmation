@@ -262,3 +262,10 @@ describe('Test-Case-Search 44', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 45', () => {
+  it('check search at error in city name with technology - Negative', () => {
+    cy.get('.search-bar').type('nablose and nodejs ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
