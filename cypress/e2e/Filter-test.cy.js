@@ -151,5 +151,8 @@ describe('Test-Case-Search 23', () => {
   })
 })
 describe('Test-Case-Search 24',()=>{
+  it('check search at Language', () => {
+    cy.get('.search-bar').type('Flask')
 
+    })
 })
