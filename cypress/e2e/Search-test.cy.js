@@ -179,5 +179,8 @@ describe('Test-Case-Search 30',()=>{
     cy.get('.search-bar').type('Frontend')
   })
 })
-=======
->>>>>>> Stashed changes
+describe('Test-Case-Search 31', () => {
+  it('check search at company name', () => {
+    cy.get('.search-bar').type('iVAS Communications Ltd')
+  })
+})
