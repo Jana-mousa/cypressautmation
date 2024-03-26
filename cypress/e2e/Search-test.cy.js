@@ -337,6 +337,30 @@ describe('Test-Case-Search 49', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 50', () => {
+  it('check search at error in language with technology - Negative', () => {
+    cy.get('.search-bar').type('java and frontand')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 51', () => {
+  it('check search at error in technology  with another  technology - Negative', () => {
+    cy.get('.search-bar').type('filter and frontend')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 52', () => {
+  it('check search at Isra Software & Computer Co-company', () => {
+    cy.get('.search-bar').type('Isra Software & Computer Co.')
+    cy.get('.actions-button').click();
+  })
+})
+describe('Test-Case-Search 53', () => {
+  it('check search at Al Andalus Software Development-company', () => {
+    cy.get('.search-bar').type('Al Andalus Software Development')
+    cy.get('.actions-button').click();
+  })
+})
 describe('Test-Case-Search 56', () => {
   it('check search at language , company , city - Negative ', () => {
     cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
