@@ -224,7 +224,7 @@ describe('Test-Case-Search 31', () => {
 describe('Test-Case-Search 32', () => {
   it('check search at addham inc23 ', () => {
     cy.get('.search-bar').type('addham inc23')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 33', () => {
@@ -236,20 +236,20 @@ describe('Test-Case-Search 33', () => {
 describe('Test-Case-Search 34', () => {
   it('check search at angular and adham and flutter', () => {
     cy.get('.search-bar').type('angular and adham and flutter ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 35', () => {
   it('check search at frontend ,al andlos software Development', () => {
     cy.get('.search-bar').type('frontend ,al andlos software Development ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
 
   })
 })
 describe('Test-Case-Search 36', () => {
   it('check search at company name broginer Technologe, python and language python', () => {
     cy.get('.search-bar').type('broginer Technologe, python ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
 
   })
 })
@@ -261,7 +261,7 @@ describe('Test-Case-Search 37', () => {
 describe('Test-Case-Search 38', () => {
   it('check search at city name nablose and  language C# ', () => {
     cy.get('.search-bar').type('nablose,C#')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 39', () => {
@@ -272,47 +272,47 @@ describe('Test-Case-Search 39', () => {
 describe('Test-Case-Search 40', () => {
   it('check search at language : angular , company: Isra Software & Computer Co , technology: frontend', () => {
     cy.get('.search-bar').type('angular and Isra Software & Computer Co and frontend ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 41', () => {
   it('check search at language: flutter , company :adham inc , technology:java', () => {
     cy.get('.search-bar').type('flutter and adham inc and java ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 42', () => {
   it('check search at company name : souktel with another company name: adham inc', () => {
     cy.get('.search-bar').type('souktel and adham inc ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 43', () => {
   it('check search at city name: ramallah ,company name: adham inc ,technology: frontend', () => {
     cy.get('.search-bar').type('ramallah and adham inc and frontend ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 44', () => {
   it('check search at company name: souktel ,city name: nablus,language: java', () => {
     cy.get('.search-bar').type('souktel and nablus and java ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 45', () => {
   it('check search at city name: nablose with technology: nodejs', () => {
     cy.get('.search-bar').type('nablose and nodejs ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
 
   })
 })
 describe('Test-Case-Search 46', () => {
   it('check search at language: frontend , company: souktel , city: tulkarm ', () => {
     cy.get('.search-bar').type('frontend and souktel and tulkarm')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
-describe('Test-Case-Search 47-negativ',()=>{
+describe('Test-Case-Search 47',()=>{
   it('check search at languge:Fultter with another language name: C1# ',()=>{
     cy.get('.search-bar').type('Fultter and C1#')
     cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
