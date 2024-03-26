@@ -150,3 +150,6 @@ describe('Test-Case-Search 23', () => {
     cy.get('.search-bar').type('DBA')
   })
 })
+describe('Test-Case-Search 24',()=>{
+
+})
