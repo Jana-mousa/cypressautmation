@@ -1,7 +1,3 @@
-//const { describe } = require("mocha");
-
-const { describe } = require("mocha");
-
 beforeEach(() => {
   cy.visit('https://stacksinfo.web.app/');
 });
@@ -13,7 +9,7 @@ describe('Test-Case-Search 1', () => {
 })
 
 describe('Test-Case-Search 2', () => {
-  it('check search at Language', () => {
+  it('check search at cypresse', () => {
     cy.get('.search-bar').type('cypress')
   })
 })
@@ -33,53 +29,53 @@ describe('Test-Case-Search 4', () => {
 })
 
 describe('Test-Case-Search 5', () => {
-  it('check search at Language ', () => {
+  it('check search at Figma ', () => {
     cy.get('.search-bar').type('Figma')
   })
 })
 
 describe('Test-Case-Search 6', () => {
-  it('check search at Company name ', () => {
+  it('check search at Olivery-company ', () => {
     cy.get('.search-bar').type('Olivery')
     cy.get('.company-name').should('contain','Olivery')
   })
 })
 
 describe('Test-Case-Search 7', () => {
-  it('check search at Company name and technology ', () => {
+  it('check search at Olivery and frontend ', () => {
     cy.get('.search-bar').type('Olivery and frontend')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 8', () => {
-  it('check search at city', () => {
+  it('check search at ramallah', () => {
     cy.get('.search-bar').type('ramallah')
   })
 })
 
 describe('Test-Case-Search 9', () => {
-  it('check search at error in city name - Negative ', () => {
+  it('check search at ramallah1- ', () => {
     cy.get('.search-bar').type('ramallah1-')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 10', () => {
-  it('check search at company name', () => {
+  it('check search at EXALT Technologies Ltd.-company', () => {
     cy.get('.search-bar').type('EXALT Technologies Ltd.')
   })
 })
 
 describe('Test-Case-Search 11', () => {
-  it('check search at error in company name - Negative', () => {
+  it('check search at EXALT Technologies Ltd.123 - company', () => {
     cy.get('.search-bar').type('EXALT Technologies Ltd.123')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 12', () => {
-  it('check search at error in company name with language - Negative', () => {
+  it('check search at EXALT Technologies Ltd. and c3++12', () => {
     cy.get('.search-bar').type('EXALT Technologies Ltd. and c3++12 ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
 
@@ -87,56 +83,56 @@ describe('Test-Case-Search 12', () => {
 })
 
 describe('Test-Case-Search 13', () => {
-  it('check search at language - Negative', () => {
+  it('check search at ypess', () => {
     cy.get('.search-bar').type('ypess ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 14', () => {
-  it('check search at language , company , technology - Negative', () => {
+  it('check search at ypess and EXALT Technologies Ltd and Qa', () => {
     cy.get('.search-bar').type('ypess and EXALT Technologies Ltd and Qa ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 15', () => {
-  it('check search at language , company , technology - Negative', () => {
+  it('check search at figma and Olivery and UIUX', () => {
     cy.get('.search-bar').type('figma and Olivery and UIUX ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 16', () => {
-  it('check search at language , company , technology - Negative', () => {
+  it('check search at figma and Olivery and Qa', () => {
     cy.get('.search-bar').type('figma and Olivery and Qa ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 17', () => {
-  it('check search at language , company , technology - Negative', () => {
+  it('check search at cypress and Olivery and UIUX', () => {
     cy.get('.search-bar').type('cypress and Olivery and UIUX ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 18', () => {
-  it('check search at language , company , technology - Negative', () => {
+  it('check search at figma and EXALT Technologies Ltd and UIUX', () => {
     cy.get('.search-bar').type('figma and EXALT Technologies Ltd and UIUX ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 19', () => {
-  it.skip('check search at language , company , technology - Negative', () => {
+  it.skip('check search at Qa and EXALT Technologies Ltd and UIUX', () => {
     cy.get('.search-bar').type('Qa and EXALT Technologies Ltd and UIUX ')
 //<<<<<<< Updated upstream
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 20', () => {
-  it.skip('check search at language , company , technology - Negative', () => {
+  it.skip('check search at Figma and EXALT Technologies Ltd and Qa', () => {
     cy.get('.search-bar').type('Figma and EXALT Technologies Ltd and Qa ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
     
