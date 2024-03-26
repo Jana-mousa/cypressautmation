@@ -313,3 +313,9 @@ describe('Test-Case-Sarch 57',()=>{
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Sarch 58',()=>{
+  it('check search at languag ',()=>{
+    cy.get('.search-bar').type('Bachend')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
