@@ -209,3 +209,10 @@ describe('Test-Case-Search 35', () => {
 
   })
 })
+describe('Test-Case-Search 36', () => {
+  it('check search at error in company name with language - Negative', () => {
+    cy.get('.search-bar').type('broginer Technologe, python ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
