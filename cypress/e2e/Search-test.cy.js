@@ -232,3 +232,9 @@ describe('Test-Case-Search 39', () => {
     cy.get('.search-bar').type('Isra Software & Computer Co')
   })
 })
+describe('Test-Case-Search 40', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('angular and Isra Software & Computer Co and frontend ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
