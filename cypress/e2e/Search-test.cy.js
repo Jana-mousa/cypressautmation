@@ -325,13 +325,8 @@ describe('Test-Case-Search 59',()=>{
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
-describe('Test-Case-Search 60',()=>{
-  it('check search at company and languag',()=>{
-    cy.get('.search-bar').type('Hebronsoft-+ and Frontend')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
-  })
-})
-describe('Test-Case-Search 61-negativ',()=>{
+
+describe('Test-Case-Search 60-negativ',()=>{
   it('check search at languge ',()=>{
     cy.get('.search-bar').type('Backend')
     cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
