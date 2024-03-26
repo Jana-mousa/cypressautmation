@@ -1,5 +1,7 @@
 //const { describe } = require("mocha");
 
+const { describe } = require("mocha");
+
 beforeEach(() => {
   cy.visit('https://stacksinfo.web.app/');
 });
@@ -190,6 +192,12 @@ describe('Test-Case-Search 28', () => {
     cy.get('.search-bar').type('Rawabi')
   })
 })
+describe('Test-Case-Search 29', () => {
+  it('check search at error in city name - Negative ', () => {
+    cy.get('.search-bar').type('Rawabiaa')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
 
 
 
@@ -293,4 +301,3 @@ describe('Test-Case-Search 45', () => {
 
   })
 })
-
