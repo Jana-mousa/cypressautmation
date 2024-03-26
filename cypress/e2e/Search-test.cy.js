@@ -129,7 +129,7 @@ describe('Test-Case-Search 18', () => {
 describe('Test-Case-Search 19', () => {
   it.skip('check search at language , company , technology - Negative', () => {
     cy.get('.search-bar').type('Qa and EXALT Technologies Ltd and UIUX ')
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
@@ -138,10 +138,9 @@ describe('Test-Case-Search 20', () => {
     cy.get('.search-bar').type('Figma and EXALT Technologies Ltd and Qa ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
     
-=======
     //cy.get('.Not-found-container').should('not.contain', 'No result available.');
     cy.get('.Not-found-container > :nth-child(3)').should('not.contain', 'No result available.');
->>>>>>> Stashed changes
+
   })
 })
 describe('Test-Case-Search 21',()=>{
@@ -173,11 +172,21 @@ describe('Test-Case-Search 25', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
-<<<<<<< Updated upstream
+describe('Test-Case-Search 26', () => {
+  it('check search at Company name ', () => {
+    cy.get('.search-bar').type('Bisan Systemss')
+    cy.get('.company-name').should('contain','Bisan Systems')
+   
+  })
+})
+
+
+
 describe('Test-Case-Search 30',()=>{
   it('check search at Frontend',()=>{
     cy.get('.search-bar').type('Frontend')
   })
 })
-=======
->>>>>>> Stashed changes
+
+
+
