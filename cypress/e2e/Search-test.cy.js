@@ -190,3 +190,9 @@ describe('Test-Case-Search 32', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 33', () => {
+  it('check search at language - Negative', () => {
+    cy.get('.search-bar').type('mooblie')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
