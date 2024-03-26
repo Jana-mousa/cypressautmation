@@ -151,7 +151,7 @@ describe('Test-Case-Search 21',()=>{
   })
 })
 describe('Test-Case-Search 22', () => {
-  it('check search at Language', () => {
+  it('check search at Language c++', () => {
     
     cy.get('.search-bar').type('c++')
   })
@@ -163,37 +163,37 @@ describe('Test-Case-Search 23', () => {
   })
 })
 describe('Test-Case-Search 24',()=>{
-  it('check search at Language', () => {
+  it('check search at Language Flask', () => {
     cy.get('.search-bar').type('Flask')
 
     })
 })
 describe('Test-Case-Search 25', () => {
-  it('check search at Backend-Flask', () => {
+  it('check search at c++', () => {
     cy.get('.search-bar').type('c++=')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 26', () => {
-  it('check search at Company name ', () => {
+  it('check search at Company name Bisan Systemss', () => {
     cy.get('.search-bar').type('Bisan Systemss')
     cy.get('.company-name').should('contain','Bisan Systems')
    
   })
 })
 describe('Test-Case-Search 27',()=>{
-  it('check seach at Company name and Language',()=>{
+  it('check seach at Company Bisan Systems and Language DBA',()=>{
     cy.get('.search-bar').type('Bisan Systemss and DBA')
     cy.get('.company-name').should('contain','Bisan Systems')
   })
 })
 describe('Test-Case-Search 28', () => {
-  it('check search at city', () => {
+  it('check search at city Rawabi', () => {
     cy.get('.search-bar').type('Rawabi')
   })
 })
 describe('Test-Case-Search 29', () => {
-  it('check search at error in city name - Negative ', () => {
+  it('check search at error in city Rawabi - Negative ', () => {
     cy.get('.search-bar').type('Rawabiaa')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
@@ -302,34 +302,40 @@ describe('Test-Case-Search 45', () => {
   })
 })
 describe('Test-Case-Search 56', () => {
-  it('check search at language , company , city - Negative ', () => {
+  it('check search at language Backend, company Bisan Systems , city Rawabi - Negative ', () => {
     cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Sarch 57',()=>{
-  it('check search at languag ',()=>{
+  it('check search at languag DBA',()=>{
     cy.get('.search-bar').type('BDA')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Sarch 58',()=>{
-  it('check search at languag ',()=>{
+  it('check search at languag Backend',()=>{
     cy.get('.search-bar').type('Bachend')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 59',()=>{
-  it('check search at languag and company',()=>{
+  it('check search at languag IQVIAc and company Frontend',()=>{
     cy.get('.search-bar').type(' IQVIAc and Frontend ')
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
 describe('Test-Case-Search 60-negativ',()=>{
-  it('check search at languge ',()=>{
+  it('check search at all company backend -negativ ',()=>{
     cy.get('.search-bar').type('Backend')
     cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
+  })
+})
+describe('Test-Case-Search 61-negativ',()=>{
+  it('check search at languge DevOps',()=>{
+    cy.get('.search-bar').type('DevOps')
+    cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','DevOps');
   })
 })
 
