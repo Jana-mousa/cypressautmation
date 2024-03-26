@@ -140,7 +140,13 @@ describe('Test-Case-Search 21',()=>{
 })
 describe('Test-Case-Search 22', () => {
   it('check search at Language', () => {
-    cy.visit('https://stacksinfo.web.app/');
+    
     cy.get('.search-bar').type('c++')
+  })
+})
+describe('Test-Case-Search 23', () => {
+  it('check search at DBA', () => {
+   
+    cy.get('.search-bar').type('DBA')
   })
 })
