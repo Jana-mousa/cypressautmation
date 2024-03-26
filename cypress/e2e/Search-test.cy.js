@@ -221,3 +221,9 @@ describe('Test-Case-Search 37', () => {
     cy.get('.search-bar').type('ProGineer Technologies')
   })
 })
+describe('Test-Case-Search 38', () => {
+  it('check search at error in city name with language - Negative ', () => {
+    cy.get('.search-bar').type('nablose,C#')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
