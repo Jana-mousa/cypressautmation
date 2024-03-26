@@ -301,3 +301,9 @@ describe('Test-Case-Search 45', () => {
 
   })
 })
+describe('Test-Case-Search 56', () => {
+  it('check search at language , company , city - Negative ', () => {
+    cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
