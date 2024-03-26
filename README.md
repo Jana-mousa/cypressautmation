@@ -1,11 +1,11 @@
 Manual and Autmation test:
 Test Type: Autmation
 Component: Search 
-The number of test cases executed : 
-The number of test cases pass : 11 + 
-The number of test cases that fail : 14 + 
-Pass percentage : 
-Fail percentage :
+The number of test cases executed : 65
+The number of test cases pass : 28
+The number of test cases that fail : 37 
+Pass percentage : 43.1%
+Fail percentage :56.92%
 Comments : we tested the language and technology and companies and cities
 
 Test Type: Manual
