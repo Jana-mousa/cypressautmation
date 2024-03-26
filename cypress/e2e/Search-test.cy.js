@@ -357,4 +357,39 @@ describe('Test-Case-Search 60-negativ',()=>{
     cy.get('.slick-active > :nth-child(1) > .slider-element').should('contain','Backend');
   })
 })
+describe('Test-Case-Search 61', () => {
+  it('check search at Reconess-company', () => {
+    cy.get('.search-bar').type('Reconess')
+    cy.get('.actions-button').click();
+  })
+})
+
+describe('Test-Case-Search 62', () => {
+  it('check search at SoukTel-company', () => {
+    cy.get('.search-bar').type('SoukTel')
+    cy.get('.actions-button').click();
+  })
+})
+
+describe('Test-Case-Search 63', () => {
+  it('check search at IQVIA-company', () => {
+    cy.get('.search-bar').type('IQVIA')
+    cy.get('.actions-button').click();
+  })
+})
+
+describe('Test-Case-Search 64', () => {
+  it('check search at Data Analytics', () => {
+    cy.get('.search-bar').type('Data Analytics')
+    cy.get('.actions-button').click();
+  })
+})
+
+describe('Test-Case-Search 65', () => {
+  it('check search at DevOps', () => {
+    cy.get('.search-bar').type('DevOps')
+    cy.get('.actions-button').click();
+  })
+})
+
 
