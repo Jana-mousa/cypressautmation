@@ -196,3 +196,9 @@ describe('Test-Case-Search 33', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 34', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('angular and adham and flutter ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
