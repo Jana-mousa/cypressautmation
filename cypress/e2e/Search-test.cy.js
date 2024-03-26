@@ -143,14 +143,14 @@ describe('Test-Case-Search 18', () => {
 })
 
 describe('Test-Case-Search 19', () => {
-  it.skip('check search at Qa and EXALT Technologies Ltd and UIUX', () => {
+  it('check search at Qa and EXALT Technologies Ltd and UIUX', () => {
     cy.get('.search-bar').type('Qa and EXALT Technologies Ltd and UIUX ')
      cy.get('.actions-button').click();
     cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 20', () => {
-  it.skip('check search at Figma and EXALT Technologies Ltd and Qa', () => {
+  it('check search at Figma and EXALT Technologies Ltd and Qa', () => {
     cy.get('.search-bar').type('Figma and EXALT Technologies Ltd and Qa ')
      cy.get('.actions-button').click();
     cy.get('.error-message').should('not.contain', 'No result available.');
