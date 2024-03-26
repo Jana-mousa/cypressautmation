@@ -202,3 +202,10 @@ describe('Test-Case-Search 34', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 35', () => {
+  it('check search at error in company name with language - Negative', () => {
+    cy.get('.search-bar').type('frontend ,al andlos software Development ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+
+  })
+})
