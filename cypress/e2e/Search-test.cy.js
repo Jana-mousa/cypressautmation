@@ -168,3 +168,8 @@ describe('Test-Case-Search 25', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 30',()=>{
+  it('check search at Frontend',()=>{
+    cy.get('.search-bar').type('Frontend')
+  })
+})
