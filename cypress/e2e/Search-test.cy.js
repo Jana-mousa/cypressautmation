@@ -325,3 +325,9 @@ describe('Test-Case-Search 60',()=>{
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 61',()=>{
+  it('check search at company and languag',()=>{
+    cy.get('.search-bar').type('Hebronsoft-+ and Frontend')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
