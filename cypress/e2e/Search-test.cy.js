@@ -185,6 +185,11 @@ describe('Test-Case-Search 27',()=>{
     cy.get('.company-name').should('contain','Bisan Systems')
   })
 })
+describe('Test-Case-Search 28', () => {
+  it('check search at city', () => {
+    cy.get('.search-bar').type('Rawabi')
+  })
+})
 
 
 
