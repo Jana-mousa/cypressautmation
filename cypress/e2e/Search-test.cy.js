@@ -238,3 +238,15 @@ describe('Test-Case-Search 40', () => {
     cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
+describe('Test-Case-Search 41', () => {
+  it('check search at language , company , technology - Negative', () => {
+    cy.get('.search-bar').type('flutter and adham inc and java ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
+describe('Test-Case-Search 42', () => {
+  it('check search at company name with another company name - Negative', () => {
+    cy.get('.search-bar').type('souktel and adham inc ')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
