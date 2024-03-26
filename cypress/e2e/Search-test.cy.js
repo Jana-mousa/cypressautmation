@@ -184,3 +184,9 @@ describe('Test-Case-Search 31', () => {
     cy.get('.search-bar').type('iVAS Communications Ltd')
   })
 })
+describe('Test-Case-Search 32', () => {
+  it('check search at error in company name - Negative', () => {
+    cy.get('.search-bar').type('addham inc23')
+    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+  })
+})
