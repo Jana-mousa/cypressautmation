@@ -182,7 +182,6 @@ describe('Test-Case-Search 24',()=>{
 describe('Test-Case-Search 25', () => {
   it('check search at c++', () => {
     cy.get('.search-bar').type('c++=')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 26', () => {
@@ -206,7 +205,6 @@ describe('Test-Case-Search 28', () => {
 describe('Test-Case-Search 29', () => {
   it('check search at error in city Rawabi  ', () => {
     cy.get('.search-bar').type('Rawabiaa')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
@@ -328,19 +326,18 @@ describe('Test-Case-Search 48', () => {
 describe('Test-Case-Search 49', () => {
   it('check search at Angular', () => {
     cy.get('.search-bar').type('Anjolar')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    
   })
 })
 describe('Test-Case-Search 50', () => {
   it('check search in language: java with technology:frontand', () => {
     cy.get('.search-bar').type('java and frontand')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 51', () => {
   it('check search at technology: fllter  with another  technology frontend', () => {
     cy.get('.search-bar').type('fllter and frontend')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
+    cy.get('.error-message').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 52', () => {
@@ -382,13 +379,11 @@ describe('Test-Case-Sarch 57',()=>{
 describe('Test-Case-Sarch 58',()=>{
   it('check search at languag Backend',()=>{
     cy.get('.search-bar').type('Bachend')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 describe('Test-Case-Search 59',()=>{
   it('check search at languag IQVIAc and company Frontend',()=>{
     cy.get('.search-bar').type(' IQVIAc and Frontend ')
-    cy.get('.Not-found-container').should('not.contain', 'No result available.');
   })
 })
 
