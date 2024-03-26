@@ -216,3 +216,8 @@ describe('Test-Case-Search 36', () => {
 
   })
 })
+describe('Test-Case-Search 37', () => {
+  it('check search at company name', () => {
+    cy.get('.search-bar').type('ProGineer Technologies')
+  })
+})
