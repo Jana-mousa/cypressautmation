@@ -361,6 +361,18 @@ describe('Test-Case-Search 53', () => {
     cy.get('.actions-button').click();
   })
 })
+describe('Test-Case-Search 54', () => {
+  it('check search at Kubernetes', () => {
+    cy.get('.search-bar').type('Kubernetes')
+    cy.get('.actions-button').click();
+  })
+})
+describe('Test-Case-Search 55', () => {
+  it('check search at Sql server', () => {
+    cy.get('.search-bar').type('Sql server')
+    cy.get('.actions-button').click();
+  })
+})
 describe('Test-Case-Search 56', () => {
   it('check search at language Backend, company Bisan Systems , city Rawabi - Negative ', () => {
     cy.get('.search-bar').type('Bisan Systems and Rawabi and Backend')
